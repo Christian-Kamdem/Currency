@@ -9,6 +9,7 @@
     "start": "tabris serve -a -w"
   },
   "dependencies": {
+    "chart.js": "2.8.0",
     "tabris": "~3.0.1"
   },
   "devDependencies": {

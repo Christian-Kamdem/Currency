@@ -2,7 +2,7 @@ module.exports = ()=>{
   const {Composite,Tab,TabFolder,ImageView,TextInput,TextView,Button,Font} = require('tabris');
   const appBasicsInformations = require('../helpers/appBasicsInformations.js');
   const menuTabs = new TabFolder({paging:true,tabBarBackground:appBasicsInformations.color1,
-    right:0,left:0,selectedTabTintColor:'white',tabTintColor:'#8b8b8b',font:'16px roboto medium'});
+    right:0,left:0,selectedTabTintColor:'white',tabTintColor:'#a5aadf'});
   const t1 = new Tab({title:'Currency'}).appendTo(menuTabs);
   const t2 = new Tab({title:'Fork'}).appendTo(menuTabs);
   const t3 = new Tab({title:'Token'}).appendTo(menuTabs);
@@ -41,9 +41,8 @@ module.exports = ()=>{
   headerPart4.append(menuTabs);
   const totalBalanceText = new TextView({
     text:"Total Balance",
-    opacity:'0.4',
     font:appBasicsInformations.font16px,
-    textColor:appBasicsInformations.color2,
+    textColor:'#a5aadf',
   }).appendTo(headerPart1);
   const totalBalanceValue = new TextView({
     text:"$23 254",
@@ -51,8 +50,8 @@ module.exports = ()=>{
     textColor:appBasicsInformations.color2
   }).appendTo(headerPart2);
   const totalBalanceTodayValue = new TextView({
-    text:"+ $ 223 73 today",
-    font:appBasicsInformations.font16pxThin,
+    text:"+ $223 73 today",
+    font:appBasicsInformations.font14pxThin,
     textColor:appBasicsInformations.color3,
     opacity:'0.95',
     bottom:0
@@ -73,9 +72,10 @@ module.exports = ()=>{
     layoutData:appBasicsInformations.buttonLayout
   }).appendTo(headerPart3);
   const notificationImage = new ImageView({
-    image:'.src/icones/notification.png',
-    width:50,
-    height:50
+    image:'src/icons/notification.png',
+    width:15,
+    height:15,
+    right:10
   }).appendTo(headerPart1);
   return theCompositeHeader;
 };
